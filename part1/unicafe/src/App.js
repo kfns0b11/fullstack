@@ -18,15 +18,25 @@ const Header = ({ content }) => {
   )
 }
 
-const Statistics = ({ good, neutral, bad }) => (
-  <>
+const Statistics = ({ good, neutral, bad }) => {
+  const all = good + neutral + bad
+  const average = (good - bad) / all
+  const positive = `${(good / all) * 100} %`
+
+  return (
+    <>
     <p>
-      good {good} <br />
-      neutral {neutral} <br />
-      bad {bad} <br />
+      good {good}<br />
+      neutral {neutral}<br />
+      bad {bad}<br />
+      all {all}<br />
+      average {average}<br />
+      positive {positive}<br />
     </p>
   </>
-)
+  )
+
+}
 
 const App = () => {
   // save clicks of each button to own state
