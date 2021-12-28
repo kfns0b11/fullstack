@@ -7,7 +7,6 @@ const Button = ({ handleClick, text }) => (
       {text}
     </button>
   </>
-
 )
 
 const Header = ({ content }) => {
